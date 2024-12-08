@@ -1,0 +1,27 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive column layout */
+  gap: 16px; /* Space between images */
+  max-height: calc(5 * 150px + 4 * 16px); /* Limiting the grid height to 5 rows (5 * image height + gaps) */
+  overflow-y: auto; /* Allows scrolling if there are more images */
+}
+
+.photo-grid img {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Ensures images cover the box proportionally */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover/click */
+}
+
+/* Hover effect: slightly zoom in the image */
+.photo-grid img:hover {
+  transform: scale(1.1); /* Enlarge image by 10% */
+}
+
+/* Click effect: shrink the image slightly */
+.photo-grid img:active {
+  transform: scale(0.95); /* Slightly shrink the image */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Stronger shadow on click */
+}

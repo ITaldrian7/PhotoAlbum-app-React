@@ -1,0 +1,11 @@
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white; /* Text color */
+    text-align: center;
+  }
+  
